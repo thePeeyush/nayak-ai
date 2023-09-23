@@ -32,7 +32,7 @@ console.log(pathname);
     <html lang="en">
       <body className={inter.className}>
         <div className=' h-screen'>
-        <header className='flex flex-row justify-between header items-center font-semibold bg-gray-800 p-4'>
+        <header className='flex overflow-x-hidden w-full fixed z-10 flex-row justify-between header items-center font-semibold bg-gray-800 p-4'>
           <div className="logo text-3xl text-yellow-500">
             NAYAK <span className=' font-extralight'>AI</span>
           </div>
@@ -61,7 +61,7 @@ console.log(pathname);
          <div className=' lg:ml-48'>
          {children}
          </div>
-          <nav className=' bottom-0 fixed w-full bg-gray-800 lg:bg-slate-600 lg:bottom-auto lg:left-0 lg:w-48'>
+          <nav className=' bottom-0 fixed w-full mt-[64px] bg-gray-800 lg:bg-slate-600 lg:bottom-auto lg:left-0 lg:w-48'>
           <ul className='flex flex-row lg:flex-col lg:h-screen lg:justify-start lg:gap-6 justify-around p-4'>
           <li className={pathname === '/'        ? ' active navlink'  : 'navlink'} onClick={() => router.push('/')} > <BiHome/>               <div className='hidden md:inline'>Home</div></li>
           <li className={pathname === '/chat'    ? ' active navlink'  : 'navlink'} onClick={() => router.push('/chat')} > <BsChatLeftText/>   <div className='hidden md:inline'>Chat</div></li>
