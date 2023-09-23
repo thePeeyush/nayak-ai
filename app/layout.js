@@ -25,9 +25,22 @@ const inter = Inter({ subsets: ['latin'] })
 export default function RootLayout({ children }) {
   const router = useRouter();
   const pathname = usePathname();
-  useEffect(()=>{
-console.log(pathname);
-  },[])
+  useEffect(() => {
+    // Load Google Translate API
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize Google Translate
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
+      );
+    };
+  }, []);
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -37,8 +50,9 @@ console.log(pathname);
             NAYAK <span className=' font-extralight'>AI</span>
           </div>
           <div className="language flex flex-row items-center gap-2">
+    <div id='google_translate_element' ></div>
           <BsGlobe2 className='text-4xl text-white'/>
-          <Select>
+          {/* <Select>
       <SelectTrigger className="w-full">
         <SelectValue placeholder="English" />
       </SelectTrigger>
@@ -52,13 +66,13 @@ console.log(pathname);
           <SelectItem value="pineapple">telgu</SelectItem>
         </SelectGroup>
       </SelectContent>
-    </Select>
+    </Select> */}
     {/* <GoogleTranslateButton /> */}
           </div>
           
         </header>
         <div className='flex flex-row'>
-         <div className=' lg:ml-48'>
+         <div className=' lg:ml-48 mt-[60px]'>
          {children}
          </div>
           <nav className=' bottom-0 fixed w-full mt-[64px] bg-gray-800 lg:bg-slate-600 lg:bottom-auto lg:left-0 lg:w-48'>
