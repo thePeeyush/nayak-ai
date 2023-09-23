@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.environmental-laws-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+  }
+  
+  .environmental-laws-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 40px;
+    width: calc(33.33% - 20px); /* Three cards in a row */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  /* Define colors for each card */
+  .environmental-laws-card:nth-child(3n+1) {
+    background-color: #ff9999; /* Red */
+  }
+  
+  .environmental-laws-card:nth-child(3n+2) {
+    background-color: #99ff99; /* Green */
+  }
+  
+  .environmental-laws-card:nth-child(3n+3) {
+    background-color: #9999ff; /* Blue */
+  }
+  
+  .environmental-laws-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .environmental-laws-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
