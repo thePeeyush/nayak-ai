@@ -81,7 +81,3 @@
 .active.navlink{
   @apply text-yellow-500
 }
-
-body{
-  @apply bg-gray-800
-}
