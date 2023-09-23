@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import ChatBot from '@/components/ui/chatbot'
 
 export default function Home() {
   return (
     <div>
-      <ChatBot/>
+      <iframe src="https://chat.openai.com/chat" frameborder="0" width={500} height={800}>
+
+      </iframe>
     </div>
   )
 }

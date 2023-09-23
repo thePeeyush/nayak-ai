@@ -21,10 +21,6 @@ import GoogleTranslateButton from '@/lib/translate'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Nayak AI',
-  description: 'an app for every legal quries',
-}
 
 export default function RootLayout({ children }) {
   const router = useRouter();
@@ -36,12 +32,12 @@ console.log(pathname);
     <html lang="en">
       <body className={inter.className}>
         <div className=' h-screen'>
-        <header className='flex flex-row absolute top-0 left-0 justify-between items-center font-semibold bg-gray-800 p-4'>
+        <header className='flex flex-row justify-between header items-center font-semibold bg-gray-800 p-4'>
           <div className="logo text-3xl text-yellow-500">
             NAYAK <span className=' font-extralight'>AI</span>
           </div>
           <div className="language flex flex-row items-center gap-2">
-          {/* <BsGlobe2 className='text-4xl text-white'/>
+          <BsGlobe2 className='text-4xl text-white'/>
           <Select>
       <SelectTrigger className="w-full">
         <SelectValue placeholder="English" />
@@ -52,11 +48,11 @@ console.log(pathname);
           <SelectItem value="apple">Hindi</SelectItem>
           <SelectItem value="banana">Gujrati</SelectItem>
           <SelectItem value="blueberry">Marathi</SelectItem>
-          <SelectItem value="grapes">Grapes</SelectItem>
-          <SelectItem value="pineapple">Pineapple</SelectItem>
+          <SelectItem value="grapes">tamil</SelectItem>
+          <SelectItem value="pineapple">telgu</SelectItem>
         </SelectGroup>
       </SelectContent>
-    </Select> */}
+    </Select>
     {/* <GoogleTranslateButton /> */}
           </div>
           

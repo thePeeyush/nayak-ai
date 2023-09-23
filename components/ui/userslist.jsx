@@ -6,7 +6,7 @@ import { AiFillStar } from 'react-icons/ai';
 export default function Userslist() {
   return (
       
-<ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+<ul className="max-w-md divide-y divide-gray-200 bg-white dark:divide-gray-700">
    <li className="py-3 px-4 sm:py-4">
       <div className="flex items-center space-x-4">
          <div className="flex-shrink-0">
